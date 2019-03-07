@@ -51,7 +51,7 @@ func resourceIkeGateway() *schema.Resource {
 			"local_ip_address_type": {
 				Type:         schema.TypeString,
 				Optional:     true,
-				ValidateFunc: validateStringIn(ikegw.LocalTypeIp, ikegw.LocalTypeFloatingIp, ""),
+				ValidateFunc: validateStringIn(ikegw.PeerTypeIp, ""),
 			},
 			"local_ip_address_value": {
 				Type:     schema.TypeString,
